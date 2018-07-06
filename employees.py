@@ -18,6 +18,9 @@ class Company(object):
         for employee in self.employees:
             employee.print_information()
 
+    def hire_employee(self, employee):
+        self.employees.add(employee)
+
 
 class Employee:
     """ this class represent the people which work at companies """
@@ -40,9 +43,9 @@ sidious = Employee("Darth", "Sidious", "Emperor", "-10 BBY")
 thrawn = Employee("Mithrando", "Thrawn", "Admiral", "-6 BBY")
 
 # add employees to galactic empire
-galactic_empire.employees.add(vader)
-galactic_empire.employees.add(sidious)
-galactic_empire.employees.add(thrawn)
+galactic_empire.hire_employee(vader)
+galactic_empire.hire_employee(sidious)
+galactic_empire.hire_employee(thrawn)
 
 # call employee report for galactic empire
 galactic_empire.get_employees()
